@@ -7,7 +7,7 @@ options<-commandArgs(trailingOnly = T)
 library(ggplot2)
 library(stringr)
 plot_heigh<-2.5
-plot_width<-6.5
+plot_width<-6.4
 
 my_data<-read.table(file=options[1],header=T,sep="\t")
 if(length(my_data[,1]) >= 10) {my_data<-my_data[1:10,]} else {
@@ -23,7 +23,7 @@ ggplot(my_data,aes(x=-1*log10(PValue),y=Term)) +
 	labs(
 		color=expression(Fold.Enrichment),
 		size="Gene number",
-		x="-logPVaule",
+		x="-logP-value",
 		# y="Pathway name",
 		title="KEGG Pathways")+
 	theme_bw()+
