@@ -7,7 +7,7 @@ options<-commandArgs(trailingOnly = T)
 library(ggplot2)
 library(stringr)
 plot_heigh<-2.5
-plot_width<-6.5
+plot_width<-5.9
 
 my_data<-read.table(file=options[1],header=T,sep="\t")
 if(length(my_data[,1]) >= 10) {my_data<-my_data[1:10,]} else {
@@ -26,6 +26,7 @@ ggplot(my_data, aes(x=-1*log10(PValue), y=Term)) +
 		x="-logP-value",
 		# y="Pathway name",
 		title="Molecular Function")+
+		#title="Celluar Component")
 	theme_bw()+
 	theme(
 		axis.text.y = element_text(size=rel(1.1)),
