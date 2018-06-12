@@ -7,10 +7,10 @@ options<-commandArgs(trailingOnly = T)
 library(ggplot2)
 library(stringr)
 plot_heigh<-2.5
-plot_width<-6.2
+plot_width<-6.8
 
 my_data<-read.table(file=options[1],header=T,sep="\t")
-if(length(my_data[,1]) >= 15) {my_data<-my_data[1:15,]} else {
+if(length(my_data[,1]) >= 10) {my_data<-my_data[1:10,]} else {
 my_data<-my_data}
 my_data$Term<-str_split_fixed(my_data$Term,"~",2)[,2]
 
