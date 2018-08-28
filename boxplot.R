@@ -7,7 +7,8 @@ library("ggplot2")
 options<-commandArgs(trailingOnly = T)
 plot_heigh<-4.5
 plot_width<-2.5
-png(file=paste('Ctrl-shTCF21','jpeg',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
+png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
+png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
 
 dat<-read.table(file=options[1],header=T)
 

@@ -7,7 +7,8 @@ library("ggplot2")
 options<-commandArgs(trailingOnly = T)
 plot_heigh<-4.5
 plot_width<-5
-png(file=paste('JUN-TCF','png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
+png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
+png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
 
 d1<-read.table(file=options[1])
 colMeans(d1)->d1.1
