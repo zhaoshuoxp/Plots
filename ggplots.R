@@ -37,9 +37,9 @@ p<-seq(-2000,1999,by=40)
 pos<-c(p,p,p)
 
 data.frame(values,sample,pos)->dat
-#76b2A3 darkgreen
+#5FBBA3 brightgreen
 #4169A0 darkblue
-#bc6985 darkpink
+#C96486 pink
 ggplot(dat,aes(x=pos,y=values,group=sample,colour=sample))+
 	geom_line(size=0.8)+
    	scale_color_manual(

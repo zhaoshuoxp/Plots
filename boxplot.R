@@ -12,9 +12,9 @@ png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, 
 
 dat<-read.table(file=options[1],header=T)
 
-#76b2A3 darkgreen
+#5FBBA3 brightgreen
 #4169A0 darkblue
-#bc6985 darkpink
+#C96486 pink
 
 pic<-ggplot(dat,aes(x=sample,y=length,fill=sample))+
 	geom_boxplot(outlier.colour = NA,notch = T)+

@@ -13,10 +13,9 @@ png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
 png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
 
 dat<-read.table(file=options[1],header=T)
-
-#76b2A3 darkgreen
+#5FBBA3 brightgreen
 #4169A0 darkblue
-#bc6985 darkpink
+#C96486 pink
 cdat <- ddply(dat, "name", summarise, dist.median=median(dist))
 ggplot(dat,aes(x=dist,fill=name))+
 	geom_histogram(binwidth= 1000, position='stack',
