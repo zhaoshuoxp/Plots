@@ -4,7 +4,7 @@
 ############################
 # arguments in command line
 options<-commandArgs(trailingOnly = T)
-library(ggplot2)
+library(Hmisc)
 library(stringr)
 plot_heigh<-2.5
 plot_width<-6.5
