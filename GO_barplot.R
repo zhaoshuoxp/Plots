@@ -5,7 +5,7 @@
 #####################################
 library("ggplot2")
 options<-commandArgs(trailingOnly = T)
-plot_heigh<-4
+plot_heigh<-5
 plot_width<-10
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
 png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
@@ -30,10 +30,10 @@ pic<-ggplot(dat,aes(x=Term,y=-1*log(Pvalue),fill = group))+
 		)+
 	#theme_bw()+
 	theme(
-		legend.position=c(0.8,0.13),
+		legend.position=c(0.78,0.13),
 		legend.text = element_text(size=12), 
 		legend.title=element_blank(), 
-		axis.text.y=element_text(size=13,colour = 'black'),
+		axis.text.y=element_text(size=15,colour = 'black'),
 		axis.title.x = element_text(size=14,colour = 'black'),
 		axis.text.x =element_text(size=12,colour = 'black')
 		)+
