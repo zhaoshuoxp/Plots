@@ -18,23 +18,24 @@ d2<-read.table(file=options[2])
 colMeans(d2)->d2.1
 #d2.2<-(d2.1*100/(max(d2.1)-min(d2.1)))
 
-#d3<-read.table(file=options[3])
-#colMeans(d3)->d3.1
+d3<-read.table(file=options[3])
+colMeans(d3)->d3.1
 #d3.2<-d1.1/mean(d3.1)
 #d3.2<-(d3.1*100/(max(d3.1)-min(d3.1)))
 
-#d4<-read.table(file=options[4])
-#colMeans(d4)->d4.1
+d4<-read.table(file=options[4])
+colMeans(d4)->d4.1
 
-values<-c(d1.1*2,d2.1*2)
+values<-c(d1.1,d2.1,d3.1,d4.1)
 
-s1<-rep("Ctrl",100)
-s2<-rep("shTCF21",100)
-#s3<-rep("HNF1A",100)
-sample<-c(s1,s2)
+s1<-rep("SMAD3",100)
+s2<-rep("TCF21",100)
+s3<-rep("ATAC",100)
+s4<-rep("HNF1A",100)
+sample<-c(s1,s2,s3,s4)
 
 p<-seq(-2000,1999,by=40)
-pos<-c(p,p)
+pos<-c(p,p,p,p)
 
 data.frame(values,sample,pos)->dat
 #5FBBA3 brightgreen
@@ -43,8 +44,8 @@ data.frame(values,sample,pos)->dat
 ggplot(dat,aes(x=pos,y=values,group=sample,colour=sample))+
 	geom_line(size=0.8)+
    	scale_color_manual(
-		breaks=c("Ctrl","shTCF21"),
-		values=c("Ctrl"="#4169A0","shTCF21"="forestgreen")
+		breaks=c("SMAD3","TCF21","ATAC","HNF1A"),
+		values=c("SMAD3"="darkblue","TCF21"="#C96486","ATAC"="#5FBBA3","HNF1A"="black")
 		)+
 	#ylim(c(0,1.7))+
 	#theme_bw()+

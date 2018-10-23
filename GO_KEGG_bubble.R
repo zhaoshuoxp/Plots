@@ -7,7 +7,7 @@ options<-commandArgs(trailingOnly = T)
 library(ggplot2)
 library(stringr)
 plot_heigh<-2.5
-plot_width<-6.2
+plot_width<-5.4
 
 my_data<-read.table(file=options[1],header=T,sep="\t")
 if(length(my_data[,1]) >= 10) {my_data<-my_data[1:10,]} else {
@@ -15,7 +15,7 @@ my_data<-my_data}
 my_data$Term<-str_split_fixed(my_data$Term,":",2)[,2]
 
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
-png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
+png(file=paste(png_name,'pdf',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
 
 ggplot(my_data,aes(x=-1*log10(PValue),y=Term)) + 
 	geom_point(aes(size=Count,color=Fold.Enrichment))+
