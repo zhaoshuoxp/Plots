@@ -19,7 +19,7 @@ dat<-read.table(file=options[1],header=T)
 ggplot(dat,aes(x=log(v1+1),y=log(v2+1),group=sig,colour=sig))+
 	geom_jitter(size=1)+	
 	theme(
-		legend.position=c(0.16,0.90), 
+		legend.position=c(0.10,0.90), 
 		legend.text = element_text(size=16), 
 		legend.title=element_blank(), 
 		axis.text.y=element_text(size=10,colour = 'black'),
