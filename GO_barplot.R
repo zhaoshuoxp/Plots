@@ -6,7 +6,7 @@
 library("ggplot2")
 options<-commandArgs(trailingOnly = T)
 plot_heigh<-5
-plot_width<-10
+plot_width<-8
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
 png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
 
@@ -25,17 +25,16 @@ pic<-ggplot(dat,aes(x=Term,y=-1*log(Pvalue),fill = group))+
 	#coord_polar(theta = "x")+
 	#flip X-Y axis
 	coord_flip()+
-	scale_fill_manual(
-		values=c("#34888c","#7caa2d","#d09683")
-		)+
+	#scale_fill_manual(values=c("#f17e2e","#4bb7e2"))+
 	#theme_bw()+
 	theme(
-		legend.position=c(0.78,0.13),
+		legend.position = c(0.78,0.13),
 		legend.text = element_text(size=12), 
-		legend.title=element_blank(), 
-		axis.text.y=element_text(size=15,colour = 'black'),
+		legend.title = element_blank(), 
+		legend.background = element_rect(fill="transparent"),
+		axis.text.y = element_text(size=15,colour = 'black'),
 		axis.title.x = element_text(size=14,colour = 'black'),
-		axis.text.x =element_text(size=12,colour = 'black')
+		axis.text.x = element_text(size=12,colour = 'black')
 		)+
 	xlab("")+
 	ylab("-log P-value")

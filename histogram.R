@@ -33,12 +33,14 @@ ggplot(dat,aes(x=dist,fill=name))+
 		values=c("TCF21ToJUN"="forestgreen","JUNToTCF21"="firebrick","TCF21ToHNF1A"="darkgrey"),
 		labels=c("TCF21 to JUN","JUN to TCF21","TCF21 to HNF1A"))+
 	theme(
-	 	legend.position=c(0.78,0.9), 
+	 	legend.position = c(0.78,0.9), 
 		legend.text = element_text(size=12), 
-		legend.title=element_blank(),
-		axis.text.y=element_text(size=10,colour = 'black'),
+		legend.title = element_blank(),
+		legend.background = element_rect(fill="transparent"),
+		legend.background = element_rect(fill="transparent"),
+		axis.text.y = element_text(size=10,colour = 'black'),
 		axis.title = element_text(size=16,colour = 'black'),
-		axis.text.x =element_text(size=12,colour = 'black')
+		axis.text.x = element_text(size=12,colour = 'black')
 	)+
 		scale_y_continuous(labels=percent)+
 		xlab("Distance to center (bp)")+

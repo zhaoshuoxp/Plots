@@ -50,12 +50,13 @@ ggplot(dat,aes(x=pos,y=values,group=sample,colour=sample))+
 	#ylim(c(0,1.7))+
 	#theme_bw()+
 	theme(
-		legend.position=c(0.88,0.90), 
+		legend.position = c(0.88,0.90), 
 		legend.text = element_text(size=16), 
-		legend.title=element_blank(), 
-		axis.text.y=element_text(size=10,colour = 'black'),
+		legend.title = element_blank(), 
+		legend.background = element_rect(fill="transparent"),
+		axis.text.y = element_text(size=10,colour = 'black'),
 		axis.title = element_text(size=20,colour = 'black'),
-		axis.text.x =element_text(size=14,colour = 'black')
+		axis.text.x = element_text(size=14,colour = 'black')
 		)+
 	xlab("Distance from peaks center (bp)")+
 	ylab("Rel.Enrichment") ->pic

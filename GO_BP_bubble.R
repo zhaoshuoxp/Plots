@@ -32,9 +32,10 @@ ggplot(my_data, aes(x=-1*log10(PValue), y=capitalize(Term))) +
 		axis.text.x = element_text(size=rel(1.0)),
 		axis.title.x = element_text(size=rel(0.9)),
 		axis.title.y = element_blank(),
-		legend.key.size=unit(0.1,"inches"),
-		legend.text=element_text(size=7),
-		legend.title=element_text(size=8),
+		legend.key.size = unit(0.1,"inches"),
+		legend.text = element_text(size=7),
+		legend.title = element_text(size=8),
+		legend.background = element_rect(fill="transparent"),
 		plot.title = element_text(hjust = 0.5,size=12)
 	)
 	

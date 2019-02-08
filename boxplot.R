@@ -23,10 +23,10 @@ pic<-ggplot(dat,aes(x=sample,y=length,fill=sample))+
 	scale_fill_manual(values=c("#4169A0","#76b2A3"))+
 	#theme_bw()+
 	theme(
-		legend.position="none",
-		axis.text.y=element_text(size=10,colour = 'black'),
+		legend.position = "none",
+		axis.text.y = element_text(size=10,colour = 'black'),
 		axis.title.y = element_text(size=14,colour = 'black'),
-		axis.text.x =element_text(size=14,colour = 'black')
+		axis.text.x = element_text(size=14,colour = 'black')
 		)+
 	xlab("")+
 	ylab("Peak length")
