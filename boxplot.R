@@ -32,6 +32,9 @@ pic<-ggplot(dat,aes(x=sample,y=length,fill=sample))+
 	ylab("Peak length")
 	
 pic
+res <- wilcox.test(length ~ sample, data = dat,
+                   exact = T)
+res
 dev.off()
 
 ################ END ################
