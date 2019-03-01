@@ -5,8 +5,8 @@
 # arguments in command line
 library("ggplot2")
 options<-commandArgs(trailingOnly = T)
-plot_heigh<-4.8
-plot_width<-5
+plot_heigh<-5
+plot_width<-6
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
 png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
 
@@ -16,10 +16,14 @@ dat<-read.table(file=options[1],header=T)
 #dat[,1]<-(dat[,1]*100/(max(dat[,1])-min(dat[,1])))
 #dat[,2]<-(dat[,2]*100/(max(dat[,2])-min(dat[,2])))
 
-ggplot(dat,aes(x=log(v1+1),y=log(v2+1),group=sig,colour=sig))+
-	geom_jitter(size=1)+	
+ggplot(dat,aes(x=pre_freq,y=post_freq,group=sig,colour=sig))+
+	geom_jitter(size=0.3)+	
+	scale_color_manual(
+			breaks=c("e-3","e-4","ns"),
+			values=c("e-3"="green","e-4"="violetred","ns"="steelblue")
+			)+
 	theme(
-		legend.position = c(0.10,0.90), 
+		#legend.position = c(0.10,0.90), 
 		legend.text = element_text(size=16), 
 		legend.title = element_blank(), 
 		legend.background = element_rect(fill="transparent"),
@@ -27,8 +31,9 @@ ggplot(dat,aes(x=log(v1+1),y=log(v2+1),group=sig,colour=sig))+
 		axis.title = element_text(size=20,colour = 'black'),
 		axis.text.x = element_text(size=14,colour = 'black')
 		)+
-	xlab("logFPKM Ctrl")+
-	ylab("logFPKM KD")->pic
+	guides(colour = guide_legend(override.aes = list(size=5)))+
+	xlab("Pre Freq")+
+	ylab("Post Freq")->pic
 pic
 dev.off()
 
