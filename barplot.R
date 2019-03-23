@@ -9,7 +9,7 @@ plot_heigh<-2.7
 plot_width<-4
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
 png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
-
+options(scipen=200000000)
 dat<-read.table(file=options[1],header=T)
 dat<- dat[seq(dim(dat)[1],1),]
 dat<-transform(dat,Gene=factor(Gene,levels=unique(Gene)))

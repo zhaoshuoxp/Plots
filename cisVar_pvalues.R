@@ -8,7 +8,7 @@ plot_heigh<-5
 plot_width<-7
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
 png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
-
+#options(scipen=200000000)
 dat<-read.table(file=options[1],header=T)
 n_row<-dim(dat)[1]
 dat$num<-seq(1,n_row)
