@@ -65,7 +65,7 @@ The output will be BP.png
 
 > You might want to change the height and width on line8 and 9 to adjust the figure and text size.
 
-![BP](/Users/Aone/Documents/Bioinf/R/assets/BP.png)
+![BP](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/BP.png)
 
 * X-axis indicates -log*P values*.
 * Y-axis indicates terms.
@@ -109,7 +109,7 @@ Then run the script:
 
 The GO.png will be generated:
 
-![GO](/Users/Aone/Documents/Bioinf/R/assets/GO.png)
+![GO](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/GO.png)
 
 > line8 and 9 for figure height and width
 
@@ -151,7 +151,7 @@ Run the script:
 
 The exp.png looks like:
 
-![Book1](/Users/Aone/Documents/Bioinf/R/assets/bar.png)
+![Book1](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/bar.png)
 
 
 
@@ -184,7 +184,7 @@ Run the script:
 
 The result will be named nc-jun.png:
 
-<img src="/Users/Aone/Documents/Bioinf/R/assets/nc-JUN.png" style="zoom:15%" />
+<img src="https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/nc-JUN.png" style="zoom:15%" />
 
 
 
