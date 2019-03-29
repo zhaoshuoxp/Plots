@@ -184,7 +184,7 @@ Run the script:
 
 The result will be named nc-jun.png:
 
-![nc-jun.png](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/nc-JUN.png)
+![nc-jun.png](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/nc-JUN1.png)
 
 
 
