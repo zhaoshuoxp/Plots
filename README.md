@@ -184,7 +184,7 @@ Run the script:
 
 The result will be named nc-jun.png:
 
-<img src="https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/nc-jun1.png" style="zoom:15%" />
+<img src="https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/nc-jun.png" style="zoom:15%" />
 
 
 
