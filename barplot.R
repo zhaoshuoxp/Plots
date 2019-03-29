@@ -14,7 +14,6 @@ dat<-read.table(file=options[1],header=T)
 dat<- dat[seq(dim(dat)[1],1),]
 dat<-transform(dat,Gene=factor(Gene,levels=unique(Gene)))
 
-dat[,2:3]->values
 dat$color<-ifelse(dat$log2FoldChange >0, "Increase",  "Decrease")
 bp_data<-data.frame(gen=dat$Gene,value=dat$log2FoldChange,col=dat$color)
 ggplot(data=bp_data,aes(x=gen,y=value,fill=col))+
