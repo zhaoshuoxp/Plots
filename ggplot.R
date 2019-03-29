@@ -6,22 +6,20 @@
 library("ggplot2")
 options<-commandArgs(trailingOnly = T)
 plot_heigh<-5
-plot_width<-6
+plot_width<-7
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
 png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
 
-#awk -v OFS="\t" '{if ($14=="yes"){print $8,$9,"Significant"}else if(($8+1)/($9+1)>=2){print $8,$9,"2fold"}else if(($9+1)/($8+1)>=2){print $8,$9,"2fold"}else{print $8,$9,"no_change"}}'
+#awk -v OFS="\t" '{if ($5<0.001){print $3,$4,"p<e-3"}else if($4<0.01){print $3,$4,"e-2<p<e-3"}else if($5<0.05){print $3,$4,"e-2<p<0.05"}else{print $3,$4,"non_sig"}}' prepost.txt > plot.txt
 
 dat<-read.table(file=options[1],header=T)
-#dat[,1]<-(dat[,1]*100/(max(dat[,1])-min(dat[,1])))
-#dat[,2]<-(dat[,2]*100/(max(dat[,2])-min(dat[,2])))
 
 ggplot(dat,aes(x=pre_freq,y=post_freq,group=sig,colour=sig))+
 	geom_jitter(size=0.3)+	
-	scale_color_manual(
-			breaks=c("e-3","e-4","ns"),
-			values=c("e-3"="green","e-4"="violetred","ns"="steelblue")
-			)+
+	#scale_color_manual(
+	#		breaks=c("e-3","e-4","ns"),
+	#		values=c("e-3"="green","e-4"="violetred","ns"="steelblue")
+	#		)+
 	theme(
 		#legend.position = c(0.10,0.90), 
 		legend.text = element_text(size=16), 

@@ -151,7 +151,7 @@ Run the script:
 
 The exp.png looks like:
 
-![Book1](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/bar.png)
+![bar](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/bar.png)
 
 
 
@@ -174,6 +174,7 @@ length	sample
 282	siJUN
 1459	siJUN
 744	siJUN
+....
 ```
 
 Run the script:
@@ -184,17 +185,130 @@ Run the script:
 
 The result will be named nc-jun.png:
 
-![nc-jun](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/nc-JUN1.png)
+![box](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/box.png)
 
 
 
 ----
 
+## lineplot.R
+
+Plots FPM matrix files from [reads_density.py](https://github.com/zhaoshuoxp/Py-NGS#reads_densitypy) or [split_turn_FPM.py](https://github.com/zhaoshuoxp/Py-NGS#split_turn_fpmpy). e.g.
+
+```shell
+./lineplot.R jun.matrix tcf21.matrix h3k27ac.matrix hnf1a.matrix
+```
+
+The script calculate the average FPM for ecah column and then layer all the lines:
+
+![line](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/line.png)
 
 
 
 
 
+----
+
+## ggplot.R
+
+A tab-delimited text file with 3 columns and headers (pre_freq, post_freq, sig):
+
+```R
+pre_freq	post_freq	sig
+0.70847495320260700513	0.84210526315789502316	non_sig
+0.9615127090692440204	1.0	non_sig
+0.88124078849661391377	0.79310344827586198857	non_sig
+0.88124078849661391377	0.78787878787878795617	non_sig
+0.5351486772587950025	0.96153846153846200817	p<e-3
+0.696367534957764045	0.625	non_sig
+0.6862146422851030936	0.6666666666666669627	non_sig
+0.9791971032881491288	1.0	non_sig
+0.88124078849661391377	0.84210526315789502316	non_sig
+0.9791971032881491288	1.0	non_sig
+0.6862146422851030936	0.90476190476190510026	e-2<p<0.05
+0.9791971032881491288	1.0	non_sig
+....
+```
+
+Run `./ggplot.R plot.txt`
+
+The figure is  will be named plot.png:
+
+![plot](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/plot.png)
+
+
+
+---
+
+## histogram.R
+
+Input: two columns with header (dist and name),  e.g. 
+
+```R
+dist	name
+1754559	TCF21ToHNF1A
+1729807	TCF21ToHNF1A
+40	JUNToTCF21
+103141	JUNToTCF21
+1159	TCF21ToJUN
+135	TCF21ToJUN
+17	TCF21ToJUN
+....
+```
+
+Run `./histogram.R his.txt`
+
+![histo](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/histo.png)
+
+
+
+----
+
+## heatmap.R
+
+Input: three columns without header, 1st: gene, 2nd: exp1, 3rd:exp3.  e.g. 
+
+```R
+CFH	7499.49805411	6264.10194253
+SLC25A13	153.279671439	88.1102301471
+CRLF1	50.018873082	110.84302439
+RALA	1642.61455338	1164.83399075
+PIK3C2A	892.558770512	729.359640082
+DCN	30560.5410263	26172.4138123
+CLDN11	3014.60289599	1614.69810131
+GPRC5A	73.3835654507	169.7576812
+....
+```
+
+Run `heatmap.R heatmap.txt`
+
+![heatmap](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/heatmap.png)
+
+
+
+----
+
+## cisVar_pvalues.R
+
+This script plots double Y-axis figure for [enrich_pvalues](https://github.com/TheFraserLab/enrich_pvalues) analysis of [cisVar output](https://github.com/TheFraserLab/cisVar). It only be used when non-significant data is unavailable so that the bulit-in plot function of enrich_pvalues doesn't work.
+
+> Change $sig_score to $enrichment_score if non_sig data available.
+
+The input looks like:
+
+```R
+nonsig_score	sig_data	nonsig_overlap	cutoff	sig_score	sig_overlap
+0	41902	0	0.05	0.053267147	2232
+0	18430	0	0.01	0.088551275	1632
+0	13979	0	0.005	0.104943129	1467
+0	8347	0	0.001	0.139211693	1162
+0	6988	0	0.0005	0.150973097	1055
+....
+```
+
+Run `cisVar_pvalues.R enrich_p.xlsx`
+
+![enrich](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/enrich.png)
 
 
 
