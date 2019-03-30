@@ -4,7 +4,7 @@
 
 This repository contains R scripts for data visualizing with ggplot2, gplots, pheatmap and DESeq2 packages.
 
-* [DEseq2.R](https://github.com/zhaoshuoxp/Rplots-NGS#DEseq2r): a independent R script seperated from [RNAseq pipeline](https://github.com/zhaoshuoxp/Pipelines-Wrappers#rnaseqsh).
+* [DEseq2.R](https://github.com/zhaoshuoxp/Rplots-NGS#DEseq2r): an independent R script separated from [RNAseq pipeline](https://github.com/zhaoshuoxp/Pipelines-Wrappers#rnaseqsh).
 
 * [GO_BP_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler) bubble plot for DAVID GO analysis in Biological Processes category.
 * [GO_KEGG_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in KEGG pathways category.
@@ -199,7 +199,7 @@ Plots FPM matrix files from [reads_density.py](https://github.com/zhaoshuoxp/Py-
 ./lineplot.R jun.matrix tcf21.matrix h3k27ac.matrix hnf1a.matrix
 ```
 
-The script calculate the average FPM for ecah column and then layer all the lines:
+The script calculates the average FPM for each column and then layer all the lines:
 
 ![line](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/line.png)
 
@@ -290,7 +290,7 @@ Run `heatmap.R heatmap.txt`
 
 ## cisVar_pvalues.R
 
-This script plots double Y-axis figure for [enrich_pvalues](https://github.com/TheFraserLab/enrich_pvalues) analysis of [cisVar output](https://github.com/TheFraserLab/cisVar). It only be used when non-significant data is unavailable so that the bulit-in plot function of enrich_pvalues doesn't work.
+This script plots double Y-axis figure for [enrich_pvalues](https://github.com/TheFraserLab/enrich_pvalues) analysis of [cisVar output](https://github.com/TheFraserLab/cisVar). It is only used when non-significant data is unavailable so that the built-in plot function of enrich_pvalues doesn't work.
 
 > Change $sig_score to $enrichment_score if non_sig data available.
 
