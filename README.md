@@ -4,17 +4,17 @@
 
 This repository contains R scripts for data visualizing with ggplot2, gplots, pheatmap and DESeq2 packages.
 
-* DEseq2.R: a independent R script seperated from [RNAseq pipeline](https://github.com/zhaoshuoxp/Pipelines-Wrappers#rnaseqsh).
+* [DEseq2.R](https://github.com/zhaoshuoxp/Rplots-NGS#DEseq2r): a independent R script seperated from [RNAseq pipeline](https://github.com/zhaoshuoxp/Pipelines-Wrappers#rnaseqsh).
 
-* GO_BP_bubble.R: bubble plot for DAVID GO analysis in Biological Processes category.
-* GO_KEGG_bubble.R: bubble plot for DAVID GO analysis in KEGG pathways category.
-* GO_GAD_bubble.R: bubble plot for DAVID GO analysis in Genetic Associated Diseases category.
+* [GO_BP_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler) bubble plot for DAVID GO analysis in Biological Processes category.
+* [GO_KEGG_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in KEGG pathways category.
+* [GO_GAD_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Genetic Associated Diseases category.
 
-* GO_MF_bubble.R: bubble plot for DAVID GO analysis in Molecular Function category.
+* [GO_MF_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Molecular Function category.
 
-* GO_barplot.R: barplot for any GO analysis in multiple categories.
-* barplot.R, boxplot.R, lineplot.R, ggplot.R, histogram.R, heatmap.R:  bar/box/line/plot/histogram/heatmap for customized data.
-* cisVar_pvalues.R: double Y-axis for [enrich_pvalues](https://github.com/TheFraserLab/enrich_pvalues) analysis of [cisVar output](https://github.com/TheFraserLab/cisVar).
+* [GO_barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_barplotr): barplot for any GO analysis in multiple categories.
+* [barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#barplotr), [boxplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#boxplotr), [lineplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#lineplotr), [ggplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#ggplotr), [histogram.R](https://github.com/zhaoshuoxp/Rplots-NGS#histogramr), [heatmap.R](https://github.com/zhaoshuoxp/Rplots-NGS#heatmapr):  bar/box/line/plot/histogram/heatmap for customized data.
+* [cisVar_pvalues.R](https://github.com/zhaoshuoxp/Rplots-NGS#cisvar_pvaluesr): double Y-axis for [enrich_pvalues](https://github.com/TheFraserLab/enrich_pvalues) analysis of [cisVar output](https://github.com/TheFraserLab/cisVar).
 
 > Requirements:
 >
