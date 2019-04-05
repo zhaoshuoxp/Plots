@@ -15,9 +15,9 @@ my_data<-my_data}
 my_data$Term<-str_split_fixed(my_data$Term,"~",2)[,2]
 
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
-png(file=paste(png_name,'pdf',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
+png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
 
-ggplot(my_data, aes(x=-1*log10(PValue), y=capitalize(Term))) + 
+ggplot(my_data, aes(x=-1*log10(Pvalue), y=capitalize(Term))) + 
 	geom_point(aes(size=Count, color=Fold.Enrichment))+
 	scale_colour_gradient(low="steelblue", high="red")+
 	labs(

@@ -4,7 +4,7 @@
 # Manual:                           #
 #####################################
 library("ggplot2")
-library('plyr')
+library('dplyr')
 library('scales')
 options<-commandArgs(trailingOnly = T)
 plot_heigh<-4

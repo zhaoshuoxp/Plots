@@ -2,23 +2,82 @@
 
 ----
 
-This repository contains R scripts for data visualizing with ggplot2, gplots, pheatmap and DESeq2 packages.
+This repository contains R scripts for data visualizing with GOplot, ggplot2, gplots, pheatmap and DESeq2 packages.
 
+* [circ_plot.R](https://github.com/zhaoshuoxp/Rplots-NGS#circ_plotr) circle plot of [GOplot](http://wencke.github.io), combined genes heatmap with DAVID GO analysis.
 * [DEseq2.R](https://github.com/zhaoshuoxp/Rplots-NGS#DEseq2r): an independent R script separated from [RNAseq pipeline](https://github.com/zhaoshuoxp/Pipelines-Wrappers#rnaseqsh).
-
 * [GO_BP_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler) bubble plot for DAVID GO analysis in Biological Processes category.
 * [GO_KEGG_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in KEGG pathways category.
 * [GO_GAD_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Genetic Associated Diseases category.
-
 * [GO_MF_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Molecular Function category.
-
 * [GO_barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_barplotr): barplot for any GO analysis in multiple categories.
 * [barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#barplotr), [boxplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#boxplotr), [lineplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#lineplotr), [ggplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#ggplotr), [histogram.R](https://github.com/zhaoshuoxp/Rplots-NGS#histogramr), [heatmap.R](https://github.com/zhaoshuoxp/Rplots-NGS#heatmapr):  bar/box/line/plot/histogram/heatmap for customized data.
 * [cisVar_pvalues.R](https://github.com/zhaoshuoxp/Rplots-NGS#cisvar_pvaluesr): double Y-axis for [enrich_pvalues](https://github.com/TheFraserLab/enrich_pvalues) analysis of [cisVar output](https://github.com/TheFraserLab/cisVar).
 
 > Requirements:
 >
-> R, DESeq2 and its dependents, ggplot2, gplots, pheatmap.
+> R and its packages: DESeq2, GOplot, ggplot2, gplots, pheatmap.
+
+
+
+----
+
+## circ_plot.R
+
+This  script uses [GOplot](http://wencke.github.io) to generate the combined heatmap and GO terms circle plot.
+
+#### Input
+
+* [DAVID](https://david.ncifcrf.gov) output, e.g. biological processes (BP).
+
+  > Change sep=":" for KEGG output on line19 and 20.
+
+* Genes with log2FoldChange, should have at least 2 headers: Genes, log2FoldChange. e.g. DEseq2 output:
+
+  ```R
+  Genes	log2FoldChange
+  AL627309.1	-0.504002431105474
+  OR4F16	-1.09710442921879
+  AL669831.1	-0.0569390224776838
+  SAMD11	-1.55921375002106
+  AL645608.1	-0.907587021624037
+  NOC2L	0.00413102160118557
+  KLHL17	-0.276980590945544
+  PLEKHN1	0.568610828210618
+  PERM1	0.434108117735876
+  ....
+  ```
+
+* A text file with 2 columns, interested genes and GO terms:
+
+  ```R
+  YAP1	cell-cell adhesion
+  SMAD2	heart development
+  CDKN2B	cell proliferation
+  TGFB2	EGF receptor signaling pathway
+  TGFBR3	VEGF receptor signaling pathway
+  SRF	cell migration
+  EGFR
+  TAGLN2 
+  KRT18
+  ZEB1
+  SMYD1
+  ...
+  ```
+
+  > Don't add header in the text file. The numbers of genes and terms can be different. Make sure every term has >=1 gene included.
+
+#### Usage
+
+```shell
+./circ_plot.R DAIVD_BP.txt DEseq2_out.txt gene_term.list
+```
+
+#### Output
+
+![GOplot](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/GOplot.png)
+
+
 
 
 
