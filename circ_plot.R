@@ -7,7 +7,7 @@ library('stringr')
 library('GOplot')
 options<-commandArgs(trailingOnly = T)
 #size
-plot_heigh<-13
+plot_heigh<-13.5
 plot_width<-12
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
 png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
