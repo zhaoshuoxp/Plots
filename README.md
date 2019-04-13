@@ -28,11 +28,11 @@ This  script uses [GOplot](http://wencke.github.io) to generate the combined hea
 
 #### Input
 
-* [DAVID](https://david.ncifcrf.gov) output, e.g. biological processes (BP).
+* [DAVID](https://david.ncifcrf.gov) output, i.e. biological processes (BP).
 
   > Change sep=":" for KEGG output on line19 and 20.
 
-* Genes with log2FoldChange, should have at least 2 headers: Genes, log2FoldChange. e.g. DEseq2 output:
+* Genes with log2FoldChange, should have at least 2 headers: Genes, log2FoldChange. i.e. DEseq2 output:
 
   ```R
   Genes	log2FoldChange
@@ -252,7 +252,7 @@ The result will be named nc-jun.png:
 
 ## lineplot.R
 
-Plots FPM matrix files from [reads_density.py](https://github.com/zhaoshuoxp/Py-NGS#reads_densitypy) or [split_turn_FPM.py](https://github.com/zhaoshuoxp/Py-NGS#split_turn_fpmpy). e.g.
+Plots FPM matrix files from [reads_density.py](https://github.com/zhaoshuoxp/Py-NGS#reads_densitypy) or [split_turn_FPM.py](https://github.com/zhaoshuoxp/Py-NGS#split_turn_fpmpy). i.e.
 
 ```shell
 ./lineplot.R jun.matrix tcf21.matrix h3k27ac.matrix hnf1a.matrix
@@ -301,7 +301,7 @@ The figure is  will be named plot.png:
 
 ## histogram.R
 
-Input: two columns with header (dist and name),  e.g. 
+Input: two columns with header (dist and name),  i.e. 
 
 ```R
 dist	name
@@ -325,7 +325,7 @@ Run `./histogram.R his.txt`
 
 ## heatmap.R
 
-Input: three columns without header, 1st: gene, 2nd: exp1, 3rd:exp3.  e.g. 
+Input: three columns without header, 1st: gene, 2nd: exp1, 3rd:exp3.  i.e. 
 
 ```R
 CFH	7499.49805411	6264.10194253
