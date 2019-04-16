@@ -12,11 +12,11 @@ This repository contains R scripts for data visualizing with GOplot, ggplot2, gp
 * [GO_MF_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Molecular Function category.
 * [GO_barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_barplotr): barplot for any GO analysis in multiple categories.
 * [barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#barplotr), [boxplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#boxplotr), [lineplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#lineplotr), [ggplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#ggplotr), [histogram.R](https://github.com/zhaoshuoxp/Rplots-NGS#histogramr), [heatmap.R](https://github.com/zhaoshuoxp/Rplots-NGS#heatmapr):  bar/box/line/plot/histogram/heatmap for customized data.
-* [cisVar_pvalues.R](https://github.com/zhaoshuoxp/Rplots-NGS#cisvar_pvaluesr): double Y-axis for [enrich_pvalues](https://github.com/TheFraserLab/enrich_pvalues) analysis of [cisVar output](https://github.com/TheFraserLab/cisVar).
+* [PrePost.R](https://github.com/zhaoshuoxp/Rplots-NGS#prepostr): asses the Pre/Post bias of the [cisVar](https://github.com/TheFraserLab/cisVar) output .
 
 > Requirements:
 >
-> R and its packages: DESeq2, GOplot, ggplot2, gplots, pheatmap.
+> R and its packages: DESeq2, GOplot, ggplot2, gplots, pheatmap, dplyr, scales.
 
 
 
@@ -347,27 +347,13 @@ Run `heatmap.R heatmap.txt`
 
 ----
 
-## cisVar_pvalues.R
+## PrePost.R
 
-This script plots double Y-axis figure for [enrich_pvalues](https://github.com/TheFraserLab/enrich_pvalues) analysis of [cisVar output](https://github.com/TheFraserLab/cisVar). It is only used when non-significant data is unavailable so that the built-in plot function of enrich_pvalues doesn't work.
+This script plots the numbers of SNPs which have higher Pre or Post frequencies and the density of the Post/Pre frequency from [cisVar](https://github.com/TheFraserLab/cisVar) output.
 
-> Change $sig_score to $enrichment_score if non_sig data available.
+Run `PrePost.R example.20.final.txt`
 
-The input looks like:
-
-```R
-nonsig_score	sig_data	nonsig_overlap	cutoff	sig_score	sig_overlap
-0	41902	0	0.05	0.053267147	2232
-0	18430	0	0.01	0.088551275	1632
-0	13979	0	0.005	0.104943129	1467
-0	8347	0	0.001	0.139211693	1162
-0	6988	0	0.0005	0.150973097	1055
-....
-```
-
-Run `cisVar_pvalues.R enrich_p.xlsx`
-
-![enrich](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/enrich.png)
+![enrich](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/prepost.png)
 
 
 

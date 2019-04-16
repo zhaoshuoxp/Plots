@@ -37,7 +37,6 @@ ggplot(dat,aes(x=dist,fill=name))+
 		legend.text = element_text(size=12), 
 		legend.title = element_blank(),
 		legend.background = element_rect(fill="transparent"),
-		legend.background = element_rect(fill="transparent"),
 		axis.text.y = element_text(size=10,colour = 'black'),
 		axis.title = element_text(size=16,colour = 'black'),
 		axis.text.x = element_text(size=12,colour = 'black')
