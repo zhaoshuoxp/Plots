@@ -11,12 +11,12 @@ SampCond <- read.table(options[2], header=T, quote="\t")
 
 names(data)[7:ncol(data)] ->sample
 sub(pattern=".bam", replacement="", sample) ->sampleNames
-if (all(SampCond\$sample==sampleNames)){
+if (all(SampCond$sample==sampleNames)){
 	
 	names(data)[7:ncol(data)] <- sampleNames
 	countData <- as.matrix(data[7:ncol(data)])
-	rownames(countData) <- data\$Geneid
-	database <- data.frame(name=sampleNames, condition=SampCond\$condition)
+	rownames(countData) <- data$Geneid
+	database <- data.frame(name=sampleNames, condition=SampCond$condition)
 	rownames(database) <- sampleNames
 	
 	dds <- DESeqDataSetFromMatrix(countData, colData=database, design= ~ condition)
