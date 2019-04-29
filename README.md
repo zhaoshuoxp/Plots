@@ -2,7 +2,7 @@
 
 ----
 
-This repository contains R scripts for data visualizing with GOplot, ggplot2, gplots, pheatmap and DESeq2 packages.
+This repository contains R scripts for data visualization with GOplot, ggplot2, gplots, pheatmap and DESeq2 packages.
 
 * [circ_plot.R](https://github.com/zhaoshuoxp/Rplots-NGS#circ_plotr) circle plot of [GOplot](http://wencke.github.io), combined genes heatmap with DAVID GO analysis.
 * [DEseq2.R](https://github.com/zhaoshuoxp/Rplots-NGS#DEseq2r): an independent R script separated from [RNAseq pipeline](https://github.com/zhaoshuoxp/Pipelines-Wrappers#rnaseqsh).
@@ -12,7 +12,7 @@ This repository contains R scripts for data visualizing with GOplot, ggplot2, gp
 * [GO_MF_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Molecular Function category.
 * [GO_barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_barplotr): barplot for any GO analysis in multiple categories.
 * [barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#barplotr), [boxplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#boxplotr), [lineplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#lineplotr), [ggplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#ggplotr), [histogram.R](https://github.com/zhaoshuoxp/Rplots-NGS#histogramr), [heatmap.R](https://github.com/zhaoshuoxp/Rplots-NGS#heatmapr):  bar/box/line/plot/histogram/heatmap for customized data.
-* [PrePost.R](https://github.com/zhaoshuoxp/Rplots-NGS#prepostr): asses the Pre/Post bias of the [cisVar](https://github.com/TheFraserLab/cisVar) output .
+* [PrePost.R](https://github.com/zhaoshuoxp/Rplots-NGS#prepostr): assert the Pre/Post bias of the [cisVar](https://github.com/TheFraserLab/cisVar) output .
 
 > Requirements:
 >
@@ -112,7 +112,7 @@ See more about [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESe
 
 ## GO_BP/KEGG/GAD/MF_bubble.R
 
-These scripts directly use the text output of [DAVID](https://david.ncifcrf.gov) without any format convert.
+These scripts directly use the text output of [DAVID](https://david.ncifcrf.gov) without any format converting.
 
 Just run with the input file:
 
