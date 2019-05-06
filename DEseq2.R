@@ -2,7 +2,6 @@
 #####################################
 # Usage: DEseq.r featureCount.txt condition.txt
 
-#!/usr/bin/env Rscript
 library("DESeq2")
 options<-commandArgs(trailingOnly = T)
 	
