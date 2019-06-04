@@ -18,7 +18,8 @@ dat<-read.table(file=options[1],header=T)
 
 pic<-ggplot(dat,aes(x=sample,y=length,fill=sample))+
 	geom_boxplot(outlier.colour = NA,notch = T)+
-	#geom_violin()+
+	#geom_violin(aes(fill = factor(sample)), scale = "width")+
+	#geom_jitter(width=0.1, height=0, size=0.1)+
 	ylim(c(0,2500))+
 	scale_fill_manual(values=c("#4169A0","#76b2A3"))+
 	#theme_bw()+
