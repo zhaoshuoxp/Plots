@@ -6,7 +6,7 @@
 options<-commandArgs(trailingOnly = T)
 library("Hmisc")
 plot_heigh<-2.3
-plot_width<-5
+plot_width<-5.2
 
 my_data<-read.table(file=options[1],header=T,sep="\t")
 if(length(my_data[,1]) >= 10) {my_data<-my_data[1:10,]} else {
@@ -26,7 +26,7 @@ ggplot(my_data,aes(x=-1*log10(PValue),y=capitalize(as.character(Term))))+
 		title="GAD enrichment")+
 	theme_bw()+
 	theme(
-		axis.text.y = element_text(size=rel(1.5),color='black'),
+		axis.text.y = element_text(size=rel(1.0),color='black'),
 		axis.text.x = element_text(size=rel(1.0)),
 		axis.title.x = element_text(size=rel(0.9)),
 		axis.title.y = element_blank(),
