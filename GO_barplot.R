@@ -5,12 +5,12 @@
 #####################################
 library("ggplot2")
 options<-commandArgs(trailingOnly = T)
-plot_heigh<-5
-plot_width<-7
+plot_heigh<-4
+plot_width<-8
 png_name<-unlist(strsplit(options[1],'.',fixed=T))[1]
 png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, res=600, units = "in", family="Arial")
 
-dat<-read.table(file=options[1],header=T,sep="\t")
+dat<-read.table(file=options[1],header=F,sep="\t")
 # keep original reversed order of $Term
 dat<- dat[seq(dim(dat)[1],1),]
 dat<-transform(dat,Term=factor(Term,levels=unique(Term)))
@@ -28,7 +28,7 @@ pic<-ggplot(dat,aes(x=Term,y=-1*log(Pvalue),fill = group))+
 	#scale_fill_manual(values=c("#f17e2e","#4bb7e2"))+
 	#theme_bw()+
 	theme(
-		legend.position = c(0.75,0.08),
+		#legend.position = c(0.75,0.9),
 		legend.text = element_text(size=10), 
 		legend.title = element_blank(), 
 		legend.background = element_rect(fill="transparent"),
