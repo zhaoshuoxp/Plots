@@ -221,28 +221,25 @@ The exp.png looks like:
 A tab-delimited text file with 2 columns and headers (length, sample):
 
 ```R
-length	sample
-319	Ctrl
-1269	Ctrl
-1730	Ctrl
-1376	Ctrl
-2411	Ctrl
-1343	Ctrl
-1159	Ctrl
-1369	siJUN
-282	siJUN
-1459	siJUN
-744	siJUN
-....
+R2	catalog
+0.0192877	Asthma
+0.00220702	Asthma
+...
+0.0200731	Blood_pressure
+0.027027	Blood_pressure
+...
+0.050078	Body_mass_index
+0.0798623	Body_mass_index
+...
 ```
 
 Run the script:
 
 ```shell
-./boxplot.R nc-jun.txt
+./boxplot.R test.txt
 ```
 
-The result will be named nc-jun.png:
+The result will be named test.png:
 
 ![box](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/box.png)
 
