@@ -11,7 +11,7 @@ This repository contains R scripts for data visualization with GOplot, ggplot2, 
 * [GO_GAD_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Genetic Associated Diseases category.
 * [GO_MF_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Molecular Function category.
 * [GO_barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_barplotr): barplot for any GO analysis in multiple categories.
-* [barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#barplotr), [boxplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#boxplotr), [lineplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#lineplotr), [ggplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#ggplotr), [histogram.R](https://github.com/zhaoshuoxp/Rplots-NGS#histogramr), [heatmap.R](https://github.com/zhaoshuoxp/Rplots-NGS#heatmapr):  bar/box/line/plot/histogram/heatmap for customized data.
+* [barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#barplotr), [boxplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#boxplotr), [densityplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#densityplotr), [ggplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#ggplotr), [histogram.R](https://github.com/zhaoshuoxp/Rplots-NGS#histogramr), [heatmap.R](https://github.com/zhaoshuoxp/Rplots-NGS#heatmapr):  bar/box/line/plot/histogram/heatmap for customized data.
 * [PrePost.R](https://github.com/zhaoshuoxp/Rplots-NGS#prepostr): assert the Pre/Post bias of the [cisVar](https://github.com/TheFraserLab/cisVar) output .
 
 > Requirements:
@@ -247,7 +247,7 @@ The result will be named test.png:
 
 ----
 
-## lineplot.R
+## densityplot.R
 
 Plots FPM matrix files from [reads_density.py](https://github.com/zhaoshuoxp/Py-NGS#reads_densitypy) or [split_turn_FPM.py](https://github.com/zhaoshuoxp/Py-NGS#split_turn_fpmpy). i.e.
 
