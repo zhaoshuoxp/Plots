@@ -14,7 +14,7 @@ dat<-read.table(file=options[1],header=T)
 
 #5FBBA3 brightgreen
 #4169A0 darkblue
-#C96486 pink
+#76b2A3 pink
 
 pic<-ggplot(dat,aes(x=sample,y=length,fill=sample))+
 	geom_boxplot(outlier.colour = NA,notch = T)+
