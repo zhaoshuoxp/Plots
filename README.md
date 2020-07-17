@@ -12,11 +12,12 @@ This repository contains R scripts for data visualization with GOplot, ggplot2, 
 * [GO_MF_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Molecular Function category.
 * [GO_barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_barplotr): barplot for any GO analysis in multiple categories.
 * [barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#barplotr), [boxplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#boxplotr), [densityplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#densityplotr), [ggplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#ggplotr), [histogram.R](https://github.com/zhaoshuoxp/Rplots-NGS#histogramr), [heatmap.R](https://github.com/zhaoshuoxp/Rplots-NGS#heatmapr):  bar/box/line/plot/histogram/heatmap for customized data.
-* [PrePost.R](https://github.com/zhaoshuoxp/Rplots-NGS#prepostr): assert the Pre/Post bias of the [cisVar](https://github.com/TheFraserLab/cisVar) output .
+* [PrePost.R](https://github.com/zhaoshuoxp/Rplots-NGS#prepostr): assert the Pre/Post bias of the [cisVar](https://github.com/TheFraserLab/cisVar) output.
+* [corr.R](https://github.com/zhaoshuoxp/Rplots-NGS#corrr): compute correlation coefficient and P value of expression matrix.
 
 > Requirements:
 >
-> R and its packages: DESeq2, GOplot, ggplot2, gplots, pheatmap, dplyr, scales.
+> R and its packages: DESeq2, GOplot, ggplot2, gplots, pheatmap, dplyr, scales, Hmisc, corrplot.
 
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
@@ -340,11 +341,7 @@ Run `heatmap.R heatmap.txt`
 
 ![heatmap](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/heatmap.png)
 
-
-
-----
-
-## PrePost.R
+## cPrePost.R
 
 This script plots the numbers of SNPs which have higher Pre or Post frequencies and the density of the Post/Pre frequency from [cisVar](https://github.com/TheFraserLab/cisVar) output.
 
@@ -356,6 +353,25 @@ Run `PrePost.R example.20.final.txt`
 
 ----
 
+##corr.R
+
+This script computes the correlation coefficients and p values from expression matrix and plots a heatmap.
+
+Run `corr.R expression.txt output`
+
+There will be three output files:
+
+* output.r: coefficient R matrix.
+* output.p: coefficient P matrix.
+* output.list: flatten coefficient R list.
+
+The heatmap looks like:
+
+![enrich](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/corr1.png)
+
+----
+
 Author  [@zhaoshuoxp](https://github.com/zhaoshuoxp)  
 
-Mar 29 2019  
+July 17 2020 
+
