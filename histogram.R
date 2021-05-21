@@ -21,7 +21,7 @@ ggplot(dat,aes(x=dist,fill=name))+
 	geom_histogram(binwidth= 1000, position='stack',
 	aes(y = (..count..)/sum(..count..))
 	)+
-	geom_vline(data=cdat, aes(xintercept=dist.median,color=name), linetype="dashed", size=1)+
+	geom_vline(data=cdat, aes(xintercept=dist.median,color=name), c)+
 	xlim(c(-600,50000))+
 	#ylim(c(0,1000))+
 	scale_fill_manual(
