@@ -353,7 +353,7 @@ Run `PrePost.R example.20.final.txt`
 
 ----
 
-##corr.R
+## corr.R
 
 This script computes the correlation coefficients and p values from expression matrix and plots a heatmap.
 
