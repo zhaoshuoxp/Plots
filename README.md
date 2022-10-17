@@ -341,7 +341,7 @@ Run `heatmap.R heatmap.txt`
 
 ![heatmap](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/heatmap.png)
 
-## cPrePost.R
+## PrePost.R
 
 This script plots the numbers of SNPs which have higher Pre or Post frequencies and the density of the Post/Pre frequency from [cisVar](https://github.com/TheFraserLab/cisVar) output.
 
