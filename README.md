@@ -1,19 +1,19 @@
-# Rplots-NGS
+# RSeqPlots
 
 ----
 
 This repository contains R scripts for data visualization with GOplot, ggplot2, gplots, pheatmap and DESeq2 packages.
 
-* [circ_plot.R](https://github.com/zhaoshuoxp/Rplots-NGS#circ_plotr) circle plot of [GOplot](http://wencke.github.io), combined genes heatmap with DAVID GO analysis.
-* [DEseq2.R](https://github.com/zhaoshuoxp/Rplots-NGS#DEseq2r): an independent R script separated from [RNAseq pipeline](https://github.com/zhaoshuoxp/Pipelines-Wrappers#rnaseqsh).
-* [GO_BP_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler) bubble plot for DAVID GO analysis in Biological Processes category.
-* [GO_KEGG_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in KEGG pathways category.
-* [GO_GAD_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Genetic Associated Diseases category.
-* [GO_MF_bubble.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Molecular Function category.
-* [GO_barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#go_barplotr): barplot for any GO analysis in multiple categories.
-* [barplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#barplotr), [boxplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#boxplotr), [densityplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#densityplotr), [ggplot.R](https://github.com/zhaoshuoxp/Rplots-NGS#ggplotr), [histogram.R](https://github.com/zhaoshuoxp/Rplots-NGS#histogramr), [heatmap.R](https://github.com/zhaoshuoxp/Rplots-NGS#heatmapr):  bar/box/line/plot/histogram/heatmap for customized data.
-* [PrePost.R](https://github.com/zhaoshuoxp/Rplots-NGS#prepostr): assert the Pre/Post bias of the [cisVar](https://github.com/TheFraserLab/cisVar) output.
-* [corr.R](https://github.com/zhaoshuoxp/Rplots-NGS#corrr): compute correlation coefficient and P value of expression matrix.
+* [circ_plot.R](https://github.com/zhaoshuoxp/RSeqPlots#circ_plotr) circle plot of [GOplot](http://wencke.github.io), combined genes heatmap with DAVID GO analysis.
+* [DEseq2.R](https://github.com/zhaoshuoxp/RSeqPlots#DEseq2r): an independent R script separated from [RNAseq pipeline](https://github.com/zhaoshuoxp/Pipelines-Wrappers#rnaseqsh).
+* [GO_BP_bubble.R](https://github.com/zhaoshuoxp/RSeqPlots#go_bpkegggadmf_bubbler) bubble plot for DAVID GO analysis in Biological Processes category.
+* [GO_KEGG_bubble.R](https://github.com/zhaoshuoxp/RSeqPlots#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in KEGG pathways category.
+* [GO_GAD_bubble.R](https://github.com/zhaoshuoxp/RSeqPlots#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Genetic Associated Diseases category.
+* [GO_MF_bubble.R](https://github.com/zhaoshuoxp/RSeqPlots#go_bpkegggadmf_bubbler): bubble plot for DAVID GO analysis in Molecular Function category.
+* [GO_barplot.R](https://github.com/zhaoshuoxp/RSeqPlots#go_barplotr): barplot for any GO analysis in multiple categories.
+* [barplot.R](https://github.com/zhaoshuoxp/RSeqPlots#barplotr), [boxplot.R](https://github.com/zhaoshuoxp/RSeqPlots#boxplotr), [densityplot.R](https://github.com/zhaoshuoxp/RSeqPlots#densityplotr), [ggplot.R](https://github.com/zhaoshuoxp/RSeqPlots#ggplotr), [histogram.R](https://github.com/zhaoshuoxp/RSeqPlots#histogramr), [heatmap.R](https://github.com/zhaoshuoxp/RSeqPlots#heatmapr):  bar/box/line/plot/histogram/heatmap for customized data.
+* [PrePost.R](https://github.com/zhaoshuoxp/RSeqPlots#prepostr): assert the Pre/Post bias of the [cisVar](https://github.com/TheFraserLab/cisVar) output.
+* [corr.R](https://github.com/zhaoshuoxp/RSeqPlots#corrr): compute correlation coefficient and P value of expression matrix.
 
 > Requirements:
 >
@@ -76,7 +76,7 @@ This  script uses [GOplot](http://wencke.github.io) to generate the combined hea
 
 #### Output
 
-![GOplot](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/GOplot.png)
+![GOplot](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/GOplot.png)
 
 
 
@@ -125,7 +125,7 @@ The output will be BP.png
 
 > You might want to change the height and width on line8 and 9 to adjust the figure and text size.
 
-![BP](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/BP.png)
+![BP](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/BP.png)
 
 * X-axis indicates -log*P values*.
 * Y-axis indicates terms.
@@ -169,7 +169,7 @@ Then run the script:
 
 The GO.png will be generated:
 
-![GO](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/GO.png)
+![GO](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/GO.png)
 
 > line8 and 9 for figure height and width
 
@@ -211,7 +211,7 @@ Run the script:
 
 The exp.png looks like:
 
-![bar](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/bar.png)
+![bar](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/bar.png)
 
 
 
@@ -242,7 +242,7 @@ Run the script:
 
 The result will be named test.png:
 
-![box](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/box.png)
+![box](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/box.png)
 
 
 
@@ -258,7 +258,7 @@ Plots FPM matrix files from [reads_density.py](https://github.com/zhaoshuoxp/Py-
 
 The script calculates the average FPM for each column and then layer all the lines:
 
-![line](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/line.png)
+![line](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/line.png)
 
 
 
@@ -291,7 +291,7 @@ Run `./ggplot.R plot.txt`
 
 The figure is  will be named plot.png:
 
-![plot](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/plot.png)
+![plot](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/plot.png)
 
 
 
@@ -315,7 +315,7 @@ dist	name
 
 Run `./histogram.R his.txt`
 
-![histo](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/histo.png)
+![histo](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/histo.png)
 
 
 
@@ -339,7 +339,7 @@ GPRC5A	73.3835654507	169.7576812
 
 Run `heatmap.R heatmap.txt`
 
-![heatmap](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/heatmap.png)
+![heatmap](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/heatmap.png)
 
 ## cPrePost.R
 
@@ -347,7 +347,7 @@ This script plots the numbers of SNPs which have higher Pre or Post frequencies 
 
 Run `PrePost.R example.20.final.txt`
 
-![enrich](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/prepost.png)
+![enrich](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/prepost.png)
 
 
 
@@ -367,7 +367,7 @@ There will be three output files:
 
 The heatmap looks like:
 
-![enrich](https://raw.githubusercontent.com/zhaoshuoxp/Rplots-NGS/master/assets/corr1.png)
+![enrich](https://raw.githubusercontent.com/zhaoshuoxp/RSeqPlots/master/assets/corr1.png)
 
 ----
 
