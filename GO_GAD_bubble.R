@@ -6,7 +6,7 @@
 options<-commandArgs(trailingOnly = T)
 library("Hmisc")
 plot_heigh<-2.3
-plot_width<-5.2
+plot_width<-5
 
 my_data<-read.table(file=options[1],header=T,sep="\t")
 if(length(my_data[,1]) >= 10) {my_data<-my_data[1:10,]} else {
