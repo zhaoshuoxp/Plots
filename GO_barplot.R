@@ -12,6 +12,7 @@ png(file=paste(png_name,'png',sep='.'),height = plot_heigh, width = plot_width, 
 
 dat<-read.table(file=options[1],header=T,sep="\t")
 # keep original reversed order of $Term
+dat$Term<-str_split_fixed(dat$Term,"~",2)[,2]
 dat<- dat[seq(dim(dat)[1],1),]
 dat<-transform(dat,Term=factor(Term,levels=unique(Term)))
 
